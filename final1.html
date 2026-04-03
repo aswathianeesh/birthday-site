@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My Deepest Wish 💖</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', sans-serif;
+            background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            text-align: center;
+            color: white;
+            overflow: hidden;
+        }
+
+        .box {
+            background: rgba(255,255,255,0.2);
+            padding: 40px;
+            border-radius: 20px;
+            backdrop-filter: blur(12px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+        }
+
+        /* TOP HEADING */
+        .title {
+            font-size: 42px;
+            font-weight: bold;
+            color: #ff1744;
+            margin-bottom: 20px;
+            text-shadow: 0 0 10px rgba(255,255,255,0.8),
+                         0 0 20px rgba(255,0,100,0.6);
+        }
+
+        /* PARAGRAPH */
+        .message {
+            font-size: 20px;
+            line-height: 1.6;
+            max-width: 500px;
+            margin-bottom: 30px;
+            text-align: center;
+           align-items: center;
+            justify-content: center;
+        }
+
+        /* FINAL BIG MESSAGE */
+        .final-text {
+            font-size: 38px;
+            font-weight: bold;
+            background: linear-gradient(90deg, #ff4081, #ff80ab, #ff1744);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-shadow: 0 0 10px rgba(255,255,255,0.8),
+                         0 0 25px rgba(255,20,147,0.7);
+            animation: glow 2s infinite alternate;
+        }
+
+        @keyframes glow {
+            from {
+                text-shadow: 0 0 10px rgba(255,255,255,0.6),
+                             0 0 20px rgba(255,105,180,0.6);
+            }
+            to {
+                text-shadow: 0 0 20px rgba(255,255,255,1),
+                             0 0 30px rgba(255,20,147,1),
+                             0 0 40px rgba(255,0,0,0.8);
+            }
+        }
+
+        /* Floating hearts */
+        .heart {
+            position: absolute;
+            font-size: 20px;
+            animation: float 6s infinite;
+        }
+
+        @keyframes float {
+            0% { transform: translateY(100vh); opacity: 0; }
+            50% { opacity: 1; }
+            100% { transform: translateY(-10vh); opacity: 0; }
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <div class="box">
+
+        <div class="title">
+            My Deepest Wish For You 💖
+        </div>
+
+       <p style="text-align:center;">
+    may this year be filled with boundless joy, new discoveries, 
+    and realization of every dream your beautiful heart holds. 
+    You deserve it all.
+</p>
+
+        <div class="final-text">
+            HAPPY BIRTHDAY MY SWEETEST LOVE...! 💖
+             Come Back Soon.. Can't Wait More...
+        </div>
+
+    </div>
+
+    <!-- Floating Hearts -->
+    <script>
+        function createHeart() {
+            const heart = document.createElement("div");
+            heart.classList.add("heart");
+            heart.innerHTML = "💖";
+            heart.style.left = Math.random() * 100 + "vw";
+            heart.style.animationDuration = (3 + Math.random() * 3) + "s";
+            document.body.appendChild(heart);
+
+            setTimeout(() => heart.remove(), 6000);
+        }
+
+        setInterval(createHeart, 500);
+    </script>
+
+</body>
+</html>

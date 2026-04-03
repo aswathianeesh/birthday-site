@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Special Surprise for My Love</title>
+<style>
+    body {
+        margin: 0;
+        padding: 0;
+        font-family: 'Segoe Script', 'Comic Sans MS', cursive;
+        background: linear-gradient(135deg, #ffecd2, #fcb69f, #ff9a9e);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        height: 100vh;
+        overflow: hidden;
+        color: black;
+        text-align: center;
+    }
+
+    h1 {
+        font-size: 4em;
+        margin-bottom: 20px;
+        color: black;
+        text-shadow: 2px 2px 5px #ffdde1;
+    }
+
+    p {
+        font-size: 2em;
+        color: black;
+        line-height: 1.5em;
+        margin: 0 20px 50px 20px;
+    }
+
+    /* Floating hearts */
+    .heart {
+        position: absolute;
+        font-size: 2em;
+        animation: float 5s linear infinite;
+        opacity: 0.8;
+    }
+
+    @keyframes float {
+        0% { transform: translateY(0) rotate(0deg); opacity: 0.8; }
+        50% { opacity: 1; }
+        100% { transform: translateY(-800px) rotate(360deg); opacity: 0; }
+    }
+
+    /* Button styling */
+    .button-container {
+        position: absolute;
+        bottom: 40px;
+        width: 100%;
+        text-align: center;
+    }
+
+    button {
+        background-color: #ff6f91;
+        color: white;
+        font-size: 1.5em;
+        padding: 15px 40px;
+        border: none;
+        border-radius: 12px;
+        cursor: pointer;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+        transition: transform 0.2s, background-color 0.2s;
+    }
+
+    button:hover {
+        background-color: #ff3d6b;
+        transform: scale(1.1);
+    }
+</style>
+</head>
+<body>
+
+<h1>Hello, MY Dearest Love</h1>
+<p>❤️ 💕 ❤️<br>Every beat of my heart whispers your name.</p>
+<p>On this special day. I wanted to create a small piece of magic</p>
+<p> Just for You</p>
+
+<!-- Floating hearts -->
+<div class="heart" style="left:10%;">❤️</div>
+<div class="heart" style="left:25%; animation-duration:6s;">💕</div>
+<div class="heart" style="left:40%; animation-duration:5s;">❤️</div>
+<div class="heart" style="left:55%; animation-duration:7s;">💕</div>
+<div class="heart" style="left:70%; animation-duration:6.5s;">❤️</div>
+<div class="heart" style="left:85%; animation-duration:5.5s;">💕</div>
+
+<script>
+// Generate extra floating hearts randomly
+for(let i=0;i<15;i++){
+    let heart = document.createElement('div');
+    heart.classList.add('heart');
+    heart.style.left = Math.random()*100 + "%";
+    heart.style.fontSize = (Math.random()*2+1)+"em";
+    heart.style.animationDuration = (Math.random()*3+3)+"s";
+    heart.innerHTML = Math.random() > 0.5 ? "❤️" : "💕";
+    document.body.appendChild(heart);
+}
+</script>
+
+<!-- Bottom button -->
+<div class="button-container">
+    <button onclick="window.location.href='s2.html'">UNWRAP MY FEELINGS</button>
+</div>
+
+</body>
+</html>

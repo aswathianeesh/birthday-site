@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Countless Reasons Why I Adore You</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: radial-gradient(circle at top, #ffe6f0, #ffd6cc);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 40px;
+            position: relative;
+            min-height: 100vh;
+        }
+
+        h1 {
+            font-size: 45px;
+            color: #e91e63;
+            text-align: center;
+            margin-bottom: 30px;
+            font-weight: bold;
+            text-shadow: 2px 2px 8px rgba(0,0,0,0.2);
+        }
+
+        .grid-container {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            grid-template-rows: 1fr 1fr;
+            gap: 20px;
+            width: 85%;
+            max-width: 1200px;
+        }
+
+        .rectangle {
+            border-radius: 20px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            padding: 20px;
+            position: relative;
+            z-index: 2;
+        }
+
+        .rectangle-left-top {
+            background: linear-gradient(135deg, #ff6f91, #ff9aa2);
+            height: 270px;
+        }
+
+        .rectangle-left-bottom {
+            background: linear-gradient(135deg, #ff7f50, #ffb347);
+            height: 270px;
+        }
+
+        .rectangle-right-top {
+            background: linear-gradient(135deg, #6a5acd, #8470ff);
+            height: 140px;
+        }
+
+        .line1 {
+            font-size: 30px;
+            font-weight: bold;
+        }
+
+        .line2 {
+            font-size: 16px;
+            margin-top: 10px;
+        }
+
+        /* 🔥 BUTTON NEAR RECTANGLES */
+        .journey-btn {
+            margin-top: 20px; /* reduced gap */
+            padding: 15px 35px;
+            font-size: 18px;
+            background: linear-gradient(135deg, #ff4081, #ff80ab);
+            color: white;
+            border: none;
+            border-radius: 12px;
+            cursor: pointer;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+            transition: 0.3s;
+            z-index: 5;
+        }
+
+        .journey-btn:hover {
+            transform: scale(1.08);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+        }
+
+        /* Floating hearts */
+        .heart {
+            position: absolute;
+            font-size: 24px;
+            color: #ff4081;
+            opacity: 0.7;
+            animation: floatUp linear infinite;
+            z-index: 1;
+        }
+
+        @keyframes floatUp {
+            0% { transform: translateY(100vh); opacity: 0; }
+            10% { opacity: 1; }
+            100% { transform: translateY(-50px); opacity: 0; }
+        }
+
+    </style>
+</head>
+<body>
+
+    <h1>Countless Reasons Why I Adore You</h1>
+
+    <div class="grid-container">
+        <div class="rectangle rectangle-left-top">
+            <div class="line1">My Favourite💖</div>
+            <div class="line2">
+                Favourite name to appear on my phone screen💕<br>
+                My Favourite voice to hear at 2AM..!
+            </div>
+        </div>
+
+        <div class="rectangle rectangle-left-bottom">
+            <div class="line1">My Soul</div>
+            <div class="line2">
+                You're my first thought in the morning<br>
+                and last wish at night...!
+            </div>
+        </div>
+
+        <div class="rectangle rectangle-right-top">
+            <div class="line1">You completes me..</div>
+            <div class="line2">
+                My surname, Dearest Friend, Lover,<br>
+                ATM, My always and Forever..
+            </div>
+        </div>
+    </div>
+
+    <button class="journey-btn" onclick="goToJourney()">
+    REMEMBER OUR JOURNEY 💖
+</button>
+
+<script>
+function goToJourney() {
+    window.location.href = "journey.html";
+}
+</script>
+</body>
+</html>
